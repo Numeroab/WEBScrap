@@ -1,6 +1,6 @@
 # WEBScrap
 
-** LOGIN  automatizado **
+** LOGIN  automatizado (GlassDoor; Indeed)**
 
 public static void login(WebDriver driver, String urlLogin, String email, String senha) throws Exception {
     driver.get(urlLogin);
@@ -12,12 +12,6 @@ public static void login(WebDriver driver, String urlLogin, String email, String
 
     Thread.sleep(5000); // espera carregar após o login
 }
-
-** Sites que serão usados **
-
-1. GlassDoor
-2. Indeed
-3. Banco Nacional de Emprego
 
 ** Conta teste **
 golfinha157@gmail.com       senhaFORTE-
