@@ -17,7 +17,12 @@ public class Vaga {
     public Float getSalario() { return salario; }
 
     public String getSalarioFormatado() {
-        return salario == null ? "Não informado" : "R$ " + salario;
+        if (salario == null) {
+            return "Não informado";
+        } else {
+            return "R$ " + salario;
+        }
+        
     }
 
     @Override

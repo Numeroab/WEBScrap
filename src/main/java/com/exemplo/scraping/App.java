@@ -27,22 +27,24 @@ public class App {
                 // Login.loginGlassdoor(driver);
                 // List<Vaga> glassdoor = GlassdoorScraper.buscar(driver, termo);
 
-                System.out.println("\n=== INDEED ===");
-                List<Vaga> indeed = IndeedScraper.buscar(driver, termo);
+                // System.out.println("\n=== INDEED ===");
+                // List<Vaga> indeed = IndeedScraper.buscar(driver, termo);
 
-                // System.out.println("\n=== BNE ===");
-                // List<Vaga> bne = BneScraper.buscar(driver, termo);
+                System.out.println("\n=== BNE ===");
+                List<Vaga> bne = BneScraper.buscar(driver, termo);
 
+            
                 // Gerar HTML com todas as vagas
-                // HtmlGenerator.gerarRelatorio(termo, new ArrayList<>(), bne, new ArrayList<>());
-                HtmlGenerator.gerarRelatorio(termo, new ArrayList<>(), new ArrayList<>(), indeed);
+                HtmlGenerator.gerarRelatorio(termo, new ArrayList<>(), bne, new ArrayList<>());
+                // HtmlGenerator.gerarRelatorio(termo, new ArrayList<>(), new ArrayList<>(),
+                // indeed);
                 // HtmlGenerator.gerarRelatorio(termo, glassdoor, bne, indeed);
 
             } finally {
                 driver.quit();
             }
 
-            System.out.println("\n✅ Finalizado! Abra o arquivo resultado.html");
+            System.out.println("\n Finalizado. Abra o arquivo resultado.html");
 
         } catch (Exception e) {
             System.err.println("Erro geral: " + e.getMessage());
